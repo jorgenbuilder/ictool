@@ -11,7 +11,8 @@ export function from32bits (
 ) : number {
     let value;
     for (let i = 0; i < 4; i++) {
-        value = value ? (value << 8) : bytes[i];
+        // @ts-ignore
+        value = (value << 8) | bytes[i];
     };
     if (value === undefined) {
         throw new Error(`Could not decode number from bytes: ${bytes.join(' ')}`);

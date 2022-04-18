@@ -19,16 +19,12 @@ export function decodeTokenIdentifier(
     tid: string,
 ) : { index : number, canister : string } {
     const bytes = Principal.fromText(tid).toUint8Array();
-    const arr = Array.from(bytes);
-    const padding = arr.splice(0, 4);
+    const padding = Array.from(bytes.subarray(0, 4));
     if (toHexString(padding) !== toHexString(Array.from(Buffer.from("\x0Atid")))) {
-        return {
-            index: 0,
-            canister: tid,
-        };
+        throw new Error(`Invalid token identifier "${tid}"`);
     } else {
         return {
-            index: from32bits(arr.splice(-4)),
+            index: from32bits(Array.from(bytes.subarray(-4))),
             canister: Principal.fromUint8Array(bytes.subarray(4, -4)).toText(),
         };
     }
