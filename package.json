@@ -1,6 +1,6 @@
 {
   "name": "ictool",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "helpful tools for internet computer projects",
   "main": "dist/index.js",
   "repository": {
