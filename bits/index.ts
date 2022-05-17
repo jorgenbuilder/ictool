@@ -27,3 +27,17 @@ export function toHexString (
         return ('0' + (byte & 0xFF).toString(16)).slice(-2);
     }).join('');
 };
+
+export function fromHexString (
+    hex : string,
+) : number[] {
+    if (hex.length % 2 !== 0) {
+        throw "Must have an even number of hex digits to convert to bytes";
+    }
+    var numBytes = hex.length / 2;
+    var byteArray = new Uint8Array(numBytes);
+    for (var i=0; i<numBytes; i++) {
+        byteArray[i] = parseInt(hex.substr(i*2, 2), 16);
+    }
+    return Array.from(byteArray);
+};
