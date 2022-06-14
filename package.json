@@ -1,6 +1,6 @@
 {
     "name": "ictool",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "helpful tools for internet computer projects",
     "main": "dist/index.js",
     "repository": {
@@ -34,7 +34,7 @@
         "ict": "cli.ts"
     },
     "engines": {
-        "node": "v17.9.0",
-        "npm": "8.5.5"
+        "node": "16.5.1",
+        "npm": "8.11.0"
     }
 }
