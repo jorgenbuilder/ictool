@@ -8,7 +8,7 @@ import { encodeTokenIdentifier, decodeTokenIdentifier } from './ext';
 const program = new Command();
 
 program
-    .name('icy')
+    .name('ict')
     .description('helpful tools for internet computer projects');
 
 const ext = program
