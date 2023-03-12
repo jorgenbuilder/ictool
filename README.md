@@ -4,11 +4,11 @@ A toolbelt for the CLI, node apps, and the browser.
 
 ## Tools
 
-- EXT Standard
-    - Encode token identifiers
-    - Decode token identifiers
-- Principals
-    - Convert to address
+-   EXT Standard
+    -   Encode token identifiers
+    -   Decode token identifiers
+-   Principals
+    -   Convert to address
 
 ## Setup
 
@@ -35,7 +35,10 @@ import {
 
 ## TODO
 
-- [ ] Key generatation / storage for testing
-- [ ] Browser app testing
-- [ ] CI
-    - [ ] Build, version, publish
+-   [ ] Key generatation / storage for testing
+-   [ ] Browser app testing
+
+## Releasing
+
+1. Bump version in package.json
+2. Create a new github release with the new version
